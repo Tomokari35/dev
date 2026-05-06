@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Projects — Tomokari</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<!-- BACKGROUND IDENTIQUE AU SITE -->
+<div class="bg">
+  <div class="bg__grid"></div>
+  <div class="bg__orb bg__orb--a"></div>
+  <div class="bg__orb bg__orb--b"></div>
+  <div class="bg__noise"></div>
+</div>
+
+<!-- TOPBAR IDENTIQUE -->
+<header class="topbar">
+<div class="container topbar__inner">
+
+<a class="brand" href="index.html">
+<span class="brand__name">Tomokari</span>
+<span class="brand__role">Roblox Developer</span>
+</a>
+
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="services.html">Services</a>
+<a class="nav__cta" href="contact.html">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<main class="container">
+
+<!-- HERO IDENTIQUE STYLE HOME -->
+<section style="padding:80px 0;text-align:center;" data-reveal>
+
+<h1 class="hero__title">Projects</h1>
+<p class="hero__lead">Explore my Roblox systems & creations</p>
+
+</section>
+
+<!-- SLIDER STYLE GLASS -->
+<section class="sliderWrap">
+
+<div class="sliderTrack">
+
+<div class="projectCard" onclick="openProject(0)">
+<img src="https://tr.rbxcdn.com/180DAY-4673d4c8e633f91b8245fda29816d3e9/256/256/Image/Webp/noFilter">
+<div class="projectInfo">
+<h3>Stradaz Cage and Bakery</h3>
+<p>Game • 2026</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPAND SECTION (STYLE CARD TON SITE) -->
+<section id="panel" class="card projectPanel">
+
+<h2 id="pTitle">Select a project</h2>
+
+<img id="pImg" class="panelImg">
+
+<p id="pDesc"></p>
+
+<div class="panelGrid">
+
+<div class="miniCard">
+<h4>Tech</h4>
+<p id="pTech"></p>
+</div>
+
+<div class="miniCard">
+<h4>Date</h4>
+<p id="pDate"></p>
+</div>
+
+<div class="miniCard">
+<h4>Role</h4>
+<p id="pRole"></p>
+</div>
+
+</div>
+
+<a id="pLink" class="btn btn--primary" target="_blank">
+Open Project
+</a>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
