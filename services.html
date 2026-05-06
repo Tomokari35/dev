@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Services — Tomokari</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<div class="bg">
+  <div class="bg__grid"></div>
+  <div class="bg__orb bg__orb--a"></div>
+  <div class="bg__orb bg__orb--b"></div>
+</div>
+
+<header class="topbar">
+<div class="container topbar__inner">
+<a class="brand" href="index.html">
+<span class="brand__name">Tomokari</span>
+<span class="brand__role">Roblox Developer</span>
+</a>
+
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="services.html">Services</a>
+<a class="nav__cta" href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+
+<section style="padding:80px 0;text-align:center;" data-reveal>
+<h1 class="hero__title">Services</h1>
+<p class="hero__lead">What I can build for your Roblox game.</p>
+</section>
+
+<section class="section">
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;">
+
+<div class="card">
+<h2>Scripting</h2>
+<p>Custom systems, optimized code, scalable architecture.</p>
+</div>
+
+<div class="card">
+<h2>UI Design</h2>
+<p>Clean interfaces with animations and UX focus.</p>
+</div>
+
+<div class="card">
+<h2>Game Design</h2>
+<p>Gameplay systems, progression and balancing.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA BLOCK -->
+<section style="margin-top:120px;" class="section">
+
+<div class="window card" style="text-align:center;">
+
+<div class="window__head">
+<div class="dots">
+<span class="dot dot--r"></span>
+<span class="dot dot--y"></span>
+<span class="dot dot--g"></span>
+</div>
+<div class="window__label">Work with me</div>
+</div>
+
+<div class="window__body">
+
+<h2>Need a Roblox Developer?</h2>
+<p>I help developers build high-quality games from scratch.</p>
+
+<div style="margin-top:20px;">
+<a class="btn btn--primary" href="contact.html">Contact Me</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+<div>© 2026 Tomokari</div>
+</footer>
+
+<!-- AUDIO GLOBAL -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SPOTIFY PLAYER -->
+<div class="music-player" id="musicPlayer">
+
+  <div class="music-left">
+    <div class="music-title">Not Playing</div>
+    <div class="music-status">Click to start</div>
+  </div>
+
+  <div class="music-controls">
+    <button id="musicToggle">▶</button>
+  </div>
+
+  <div class="music-right">
+    <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.1" class="slider">
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
