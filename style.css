@@ -751,3 +751,115 @@ padding:10px;
 border-radius:10px;
 }
 }
+
+.music-player{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 700px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 16px;
+  border-radius: 16px;
+
+  background: rgba(20, 10, 40, 0.6);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(124,58,237,0.4);
+
+  box-shadow: 0 0 30px rgba(124,58,237,0.25);
+  z-index: 9999;
+}
+
+.music-left{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.music-title{
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.music-status{
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.music-controls button{
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg,#7c3aed,#d946ef);
+  color: white;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.music-controls button:hover{
+  transform: scale(1.1);
+}
+
+.music-right input{
+  width: 120px;
+}
+
+/* ===== SLIDER MODERNE ===== */
+.slider {
+  -webkit-appearance: none;
+  width: 130px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  outline: none;
+  cursor: pointer;
+}
+
+/* track */
+.slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7c3aed, #d946ef);
+}
+
+/* ===== THUMB CORRIGÉ ===== */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  background: white;
+  border: 2px solid #7c3aed;
+
+  box-shadow: 0 0 10px rgba(124,58,237,0.6);
+
+  /* 🔥 FIX IMPORTANT CENTRAGE */
+  margin-top: -5px; /* <-- clé du problème */
+
+  transition: transform 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Firefox fix */
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #7c3aed;
+}

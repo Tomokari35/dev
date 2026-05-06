@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomokari — Roblox Developer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<div class="bg">
+  <div class="bg__grid"></div>
+  <div class="bg__orb bg__orb--a"></div>
+  <div class="bg__orb bg__orb--b"></div>
+</div>
+
+<header class="topbar">
+<div class="container topbar__inner">
+
+<a class="brand" href="index.html">
+<span class="brand__name">Tomokari</span>
+<span class="brand__role">Roblox Developer</span>
+</a>
+
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="services.html">Services</a>
+<a class="nav__cta" href="contact.html">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<main class="container">
+
+<!-- TITLE -->
+<section style="padding:80px 0;text-align:center;">
+<h1 class="hero__title">Portfolio</h1>
+<p class="hero__lead">Click a category to view my work</p>
+</section>
+
+<!-- CATEGORIES -->
+<section class="portfolioGrid">
+
+<div class="card portfolioCard" onclick="openCategory('script')">
+<h2>💻 Scripts</h2>
+<p>Gameplay systems & backend</p>
+</div>
+
+<div class="card portfolioCard" onclick="openCategory('model')">
+<h2>🧱 3D Models</h2>
+<p>Low poly / detailed builds</p>
+</div>
+
+<div class="card portfolioCard" onclick="openCategory('ui')">
+<h2>🎨 UI / Interface</h2>
+<p>User interface & UX design</p>
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+
+<h2 id="galleryTitle">Select a category</h2>
+
+<div id="galleryGrid" class="galleryGrid"></div>
+
+</section>
+
+</main>
+
+<!-- AUDIO GLOBAL -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SPOTIFY PLAYER -->
+<div class="music-player" id="musicPlayer">
+
+  <div class="music-left">
+    <div class="music-title">Not Playing</div>
+    <div class="music-status">Click to start</div>
+  </div>
+
+  <div class="music-controls">
+    <button id="musicToggle">▶</button>
+  </div>
+
+  <div class="music-right">
+    <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.1" class="slider">
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
