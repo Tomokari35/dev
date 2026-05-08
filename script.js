@@ -141,7 +141,9 @@ music.volume = volume !== null ? volume : 0.1;
 
 const playlist = [
   { name: "Tomokari Sound 1", src: "music1.mp3" },
-  { name: "Tomokari Sound 2", src: "music2.mp3" }
+  { name: "Tomokari Sound 2", src: "music2.mp3" },
+  { name: "Tomokari Sound 3", src: "music3.mp3" },
+  { name: "Tomokari Sound 4", src: "music4.mp3" },
 ];
 
 let index = 0;
