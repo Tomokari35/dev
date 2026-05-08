@@ -123,6 +123,9 @@ behavior:"smooth"
 });
 }
 
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
 const music = document.getElementById("music");
 const btn = document.getElementById("musicToggle");
 const slider = document.getElementById("volumeSlider");
@@ -136,15 +139,51 @@ let volume = localStorage.getItem("musicVolume");
 
 music.volume = volume !== null ? volume : 0.1;
 
+const playlist = [
+  { name: "Tomokari Sound 1", src: "music1.mp3" },
+  { name: "Tomokari Sound 2", src: "music2.mp3" }
+];
+
+let index = 0;
+loadTrack(index);
+function loadTrack(i) {
+  music.src = playlist[i].src;
+  title.innerText = playlist[i].name;
+}
+
+function nextTrack() {
+  index = (index + 1) % playlist.length;
+  loadTrack(index);
+  music.play();
+  updateUI();
+}
+
+function prevTrack() {
+  index = (index - 1 + playlist.length) % playlist.length;
+  loadTrack(index);
+  music.play();
+  updateUI();
+}
+
+prevBtn.onclick = () => {
+  prevTrack();
+  isPlaying = true;
+  localStorage.setItem("musicPlaying", "true");
+};
+
+nextBtn.onclick = () => {
+  nextTrack();
+  isPlaying = true;
+  localStorage.setItem("musicPlaying", "true");
+};
+
 // 🎧 update UI function (IMPORTANT)
 function updateUI() {
   if (music.paused) {
-    title.innerText = "Not Playing";
     status.innerText = "Paused";
     btn.innerText = "▶";
   } else {
-    title.innerText = "Now Playing";
-    status.innerText = "Tomokari Sound";
+    status.innerText = "Now Playing";
     btn.innerText = "⏸";
   }
 }
