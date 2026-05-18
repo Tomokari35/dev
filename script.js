@@ -202,14 +202,14 @@ window.addEventListener("load", () => {
 });
 
 // premier clic = active son
-document.addEventListener("click", () => {
-  if (music.muted) {
-    music.muted = false;
-    music.play().catch(() => {});
-    localStorage.setItem("musicPlaying", "true");
-    updateUI();
-  }
-});
+// document.addEventListener("click", () => {
+  // if (music.muted) {
+    // music.muted = false;
+    // music.play().catch(() => {});
+    // localStorage.setItem("musicPlaying", "true");
+    // updateUI();
+  // }
+// });
 
 // bouton play/pause
 btn.onclick = () => {
